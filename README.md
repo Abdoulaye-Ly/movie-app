@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 # MovieApp
+Check It ON Vercel: https://movie-app-abdoulayely.vercel.app/trending
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
 
@@ -60,5 +61,5 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 =======
 # movie-app
-Angular SPA to fetch movies from TMDB API and add/remove the movie to the favorite list of the authenticated user. - Added different modules like Login, Trending movies, Search module, Logout, Add to Favorites
+Angular SPA to fetch movies from TMDB API and add/remove the movie to the favorite list of the authenticated user. - Added different modules like Login, Trending movies, Search module, Logout, Add to Favorites.  https://movie-app-abdoulayely.vercel.app/trending
 >>>>>>> a7caf67c59e39707493f380ab5073090ae46430b
