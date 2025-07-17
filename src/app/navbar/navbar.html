@@ -4,9 +4,15 @@
     <li><a routerLink="/search" routerLinkActive="active">Search</a></li>
     <li><a routerLink="/favorites" routerLinkActive="active">Favorites</a></li>
 
+    <!-- Show both if NOT signed in -->
     <li *ngIf="!isLoggedIn">
-      <a routerLink="/login" routerLinkActive="active">Login</a>
+      <a routerLink="/login" routerLinkActive="active">Sign In</a>
     </li>
+    <li *ngIf="!isLoggedIn">
+      <a routerLink="/register" routerLinkActive="active">Sign Up</a>
+    </li>
+
+    <!-- Show logout if signed in -->
     <li *ngIf="isLoggedIn">
       <a href="#" (click)="logout()">Logout</a>
     </li>

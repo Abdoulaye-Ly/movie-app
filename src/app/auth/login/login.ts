@@ -27,11 +27,18 @@ export class Login {
   constructor(private router: Router) {}
 
   login() {
-    if (this.username.trim() && this.password.trim()) {
-      localStorage.setItem('loggedInUser', this.username);
-      this.router.navigate(['/']);
-    } else {
-      alert('Please enter username and password.');
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find((u: any) => u.username === this.username && u.password === this.password);
+
+    if (!user) {
+      alert('Invalid credentials!');
+      return;
     }
+
+    // Fake JWT
+    const fakeToken = btoa(`${this.username}:fake-jwt`);
+    localStorage.setItem('jwt', fakeToken);
+
+    this.router.navigate(['/']);
   }
 }

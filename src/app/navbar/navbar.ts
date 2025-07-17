@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+import { CommonModule } from '@angular/common'
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss'
+  styleUrls: ['./navbar.scss'],
 })
 export class Navbar {
-  get isLoggedIn() {
-    return !!localStorage.getItem('loggedInUser');
+  constructor(private router: Router) {}
+
+  get isLoggedIn(): boolean {
+    return !!localStorage.getItem('jwt');
   }
 
   logout() {
-    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('jwt');
+    this.router.navigate(['/']);
   }
 }
