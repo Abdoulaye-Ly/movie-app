@@ -1,1 +1,13 @@
-<p>favorites works!</p>
+<h2>Your Favorites</h2>
+
+<div class="favorites-grid">
+  <mat-card *ngFor="let movie of favorites" class="favorite-card">
+    <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-actions>
+      <button mat-button color="warn" (click)="removeFromFavorites(movie)">
+        Remove
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

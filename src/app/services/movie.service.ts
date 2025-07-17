@@ -21,6 +21,25 @@ export class MovieService {
   getMovieDetails(id: number) {
     return this.http.get(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`);
   }
+
+  addToFavorites(movie: any) {
+    let favorites = this.getFavorites();
+    if (!favorites.find((m: any) => m.id === movie.id)) {
+      favorites.push(movie);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+  }
+
+  removeFromFavorites(movieId: number) {
+    let favorites = this.getFavorites();
+    favorites = favorites.filter((m: any) => m.id !== movieId);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }
+
+  getFavorites(): any[] {
+    const data = localStorage.getItem('favorites');
+    return data ? JSON.parse(data) : [];
+  }
 }
 
 

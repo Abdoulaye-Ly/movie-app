@@ -22,11 +22,12 @@ export class Trending implements OnInit {
   }
 
   addToFavorites(movie: any) {
-    console.log('Add to favorites:', movie.title);
+  this.movieService.addToFavorites(movie);
   }
 
   removeFromFavorites(movie: any) {
-    console.log('Remove from favorites:', movie.title);
+    this.movieService.removeFromFavorites(movie.id);
   }
+
 }
 
