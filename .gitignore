@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 574326a158e4cee6ff6a88414abb271dca93d37f
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -41,6 +44,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 =======
 # Angular specific
 /dist/
@@ -71,3 +75,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> a7caf67c59e39707493f380ab5073090ae46430b
+=======
+>>>>>>> 574326a158e4cee6ff6a88414abb271dca93d37f

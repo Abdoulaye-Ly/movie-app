@@ -133,3 +133,12 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  max-width: 250px;
+}
