@@ -1,0 +1,22 @@
+<h2>Search Movies</h2>
+
+<mat-form-field appearance="fill" class="search-field">
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="query" (keyup.enter)="searchMovies()">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="searchMovies()">Search</button>
+
+<div class="results-grid">
+  <mat-card *ngFor="let movie of results" class="result-card">
+    <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ movie.overview | slice:0:100 }}...</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="addToFavorites(movie)">
+        Add to Favorites
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

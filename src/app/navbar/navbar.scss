@@ -1,0 +1,24 @@
+.navbar {
+  background: #01323c;
+  padding: 1rem;
+  
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &.active {
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
